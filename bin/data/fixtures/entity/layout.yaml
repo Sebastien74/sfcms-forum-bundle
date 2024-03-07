@@ -1,0 +1,5 @@
+App\Entity\Layout\Action:
+    translations:
+        forum-view:
+            fr: "Forum"
+            en: 'Forum'
