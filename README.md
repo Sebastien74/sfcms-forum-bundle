@@ -7,7 +7,7 @@
 [![Generic badge](https://img.shields.io/badge/Contributor-1-blue.svg?style=flat-square)](https://github.com/Sebastien74)
 ![Generic badge](https://img.shields.io/badge/PHP-8.3-red.svg?style=flat-square)
 
-**Module used to create and display stories.**
+**Module allowing you to create a forum. Each forum will be made up of several topics, in which there will be comments, shares and likes**
 
 ---
 
