@@ -1,7 +1,7 @@
 {
     "name": "sfcms/forum-bundle",
     "type": "symfony-bundle",
-    "description": "Module allowing you to create and display stories and display publication forms on the front.",
+    "description": "Module allowing you to create a forum. Each forum will be made up of several topics, in which there will be comments, shares and likes.",
     "config": {
         "slug": "forum",
         "title": "Forum",
@@ -11,7 +11,7 @@
         "module": {
             "name": "Forums",
             "description": "Module permettant de créer un forum. Chaque forum sera composé de plusieurs sujets, dans lesquels se trouveront des commentaires, des partages et des likes.",
-            "descriptionEn": "Module allowing you to create and display stories and display publication forms on the front.",
+            "descriptionEn": "Module allowing you to create a forum. Each forum will be made up of several topics, in which there will be comments, shares and likes.",
             "icon": "/medias/icons/fontawesome/light/waveform.svg"
         },
         "actions": [
