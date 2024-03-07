@@ -1,5 +1,5 @@
 {
-    "name": "sfcms/story-bundle",
+    "name": "sfcms/forum-bundle",
     "type": "symfony-bundle",
     "description": "Module allowing you to create and display stories and display publication forms on the front.",
     "config": {
