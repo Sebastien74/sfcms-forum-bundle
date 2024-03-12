@@ -3,6 +3,7 @@
 namespace App\Form\Type\Module\Forum;
 
 use App\Entity\Module\Forum\Comment;
+use App\Service\Interface\CoreLocatorInterface;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -17,11 +18,14 @@ use Symfony\Contracts\Translation\TranslatorInterface;
  */
 class FrontCommentType extends AbstractType
 {
+    private TranslatorInterface $translator;
+
     /**
      * FrontCommentType constructor.
      */
-    public function __construct(private readonly TranslatorInterface $translator)
+    public function __construct(private readonly CoreLocatorInterface $coreLocator)
     {
+        $this->translator = $this->coreLocator->translator();
     }
 
     public function buildForm(FormBuilderInterface $builder, array $options): void

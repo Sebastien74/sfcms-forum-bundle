@@ -5,6 +5,7 @@ namespace App\Form\Type\Module\Forum;
 use App\Entity\Module\Forum\Comment;
 use App\Entity\Module\Forum\Forum;
 use App\Form\Widget as WidgetType;
+use App\Service\Interface\CoreLocatorInterface;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -23,11 +24,14 @@ class FrontForumType extends AbstractType
         'authorName', 'message',
     ];
 
+    private TranslatorInterface $translator;
+
     /**
      * FrontForumType constructor.
      */
-    public function __construct(private readonly TranslatorInterface $translator)
+    public function __construct(private readonly CoreLocatorInterface $coreLocator)
     {
+        $this->translator = $this->coreLocator->translator();
     }
 
     public function buildForm(FormBuilderInterface $builder, array $options): void
