@@ -5,9 +5,13 @@
     "config": {
         "slug": "forum",
         "title": "Forum",
-        "roleTitle": "Gestion des forums",
-        "roleTitleEn": "Forum management",
         "cmd": "app:copy:bundle",
+        "roles": {
+            "ROLE_FORUM": {
+                "en": "Forum management",
+                "fr": "Gestion des forums"
+            }
+        },
         "module": {
             "name": "Forums",
             "description": "Module permettant de créer un forum. Chaque forum sera composé de plusieurs sujets, dans lesquels se trouveront des commentaires, des partages et des likes.",
@@ -41,8 +45,8 @@
         }
     ],
     "require": {
-        "php": ">=8.2.11",
-        "symfony/framework-bundle": "^6.4|^7.0"
+        "php": ">=8.3",
+        "symfony/framework-bundle": "^7.0"
     },
     "extra": {
         "branch-alias": {
