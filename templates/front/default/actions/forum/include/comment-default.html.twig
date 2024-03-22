@@ -24,7 +24,7 @@
                     <ul class="reset">
                         {% if 'likes' in forum.widgets and app.user %}
                             <li class="d-inline-block me-3">
-                                {{ "fad fa-thumbs-up"|fontawesome(null, 17, 'me-2') }}{{ emt("J’aime"|trans|raw) }}
+                                {{ "fad thumbs-up"|icon(null, 17, 'me-2') }}{{ emt("J’aime"|trans|raw) }}
                             </li>
                         {% endif %}
                         {% if 'comments' in forum.widgets %}
@@ -33,7 +33,7 @@
                                 data-target="#collapse-comment-{{ comment.id }}"
                                 aria-expanded="{% if submit %}true{% else %}false{% endif %}"
                                 aria-controls="collapse-comment-{{ comment.id }}">
-                                {{ "fad fa-comments-alt"|fontawesome(null, 17, 'me-2') }}{{ emt("Commenter"|trans|raw) }}
+                                {{ "fad comments-alt"|icon(null, 17, 'me-2') }}{{ emt("Commenter"|trans|raw) }}
                             </li>
                         {% endif %}
                         {% if 'shares' in forum.widgets %}

@@ -5,11 +5,11 @@
 {% set description = comment.message %}
 {% set ogImage = '' %}
 {% set sharers = {
-    'facebook': {'media': 'fab fa-facebook-f', 'url': "https://www.facebook.com/sharer/sharer.php?u=" ~ shareUrl},
-    'twitter': {'media': 'fab fa-twitter', 'url': "https://twitter.com/intent/tweet?status=" ~ shareUrl ~ "&text=" ~ title},
-    'pinterest': {'media': 'fab fa-pinterest-p', 'url': "https://pinterest.com/pin/create/button/?url=" ~ shareUrl ~ "&media=" ~ ogImage ~ "&description=" ~ description},
-    'linkedin': {'media': 'fab fa-linkedin-in', 'url': "https://www.linkedin.com/shareArticle?mini=true&url=" ~ shareUrl ~ "&title=" ~ title},
-    'email': {'media': 'fal fa-envelope'}
+    'facebook': {'media': 'fab facebook-f', 'url': "https://www.facebook.com/sharer/sharer.php?u=" ~ shareUrl},
+    'twitter': {'media': 'fab twitter', 'url': "https://twitter.com/intent/tweet?status=" ~ shareUrl ~ "&text=" ~ title},
+    'pinterest': {'media': 'fab pinterest-p', 'url': "https://pinterest.com/pin/create/button/?url=" ~ shareUrl ~ "&media=" ~ ogImage ~ "&description=" ~ description},
+    'linkedin': {'media': 'fab linkedin-in', 'url': "https://www.linkedin.com/shareArticle?mini=true&url=" ~ shareUrl ~ "&title=" ~ title},
+    'email': {'media': 'fal envelope'}
 } %}
 
 {% set content = '<ul class="reset">' %}
@@ -17,11 +17,11 @@
         {% set content = content ~ '<li class="d-inline-block">' %}
             {% if code == 'email' %}
                 {% set content = content ~ '<span class="share-link ' ~ code ~ '" title="' ~ code|capitalize ~ '" data-toggle="modal" data-target="#share-forum-email-modal-' ~ comment.id ~ '">' %}
-                    {% set content = content ~ config['media']|fontawesome(null, 17) %}
+                    {% set content = content ~ config['media']|icon(null, 17) %}
                 {% set content = content ~ '</span>' %}
             {% else %}
                 {% set content = content ~ '<a href="' ~ config['url'] ~ '" class="share-link ' ~ code ~ '" title="' ~ code|capitalize ~ '">' %}
-                    {% set content = content ~ config['media']|fontawesome(null, 17) %}
+                    {% set content = content ~ config['media']|icon(null, 17) %}
                 {% set content = content ~ '</a>' %}
             {% endif %}
         {% set content = content ~ '</li>' %}
@@ -35,7 +35,7 @@
        data-toggle="popover"
        data-trigger="focus"
        data-content="{{ content }}">
-        {{ "fad fa-share"|fontawesome(null, 17, 'me-2') }}{{ emt("Partager"|trans|raw) }}
+        {{ "fad share"|icon(null, 17, 'me-2') }}{{ emt("Partager"|trans|raw) }}
     </a>
 </li>
 
